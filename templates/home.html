@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+   {% if user.is_authenticated %}
+      Welcome {{ user.username }}
+      <p><a href="{% url 'queue_list' %}">Go to queue</a></p>
+   {% else %}
+      <p>Login or signup to access your queue...</p>
+   {% endif %}
+{% endblock content %}
