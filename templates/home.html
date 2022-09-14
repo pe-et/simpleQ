@@ -5,6 +5,7 @@
 {% block content %}
    {% if user.is_authenticated %}
       Welcome {{ user.username }}
+      <br>
       <p><a href="{% url 'queue_list' %}">Go to queue</a></p>
    {% else %}
       <p>Login or signup to access your queue...</p>

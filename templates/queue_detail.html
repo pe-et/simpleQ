@@ -1,15 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="article-entry">
-   <p><i>{{ object.date|date:"d M Y" }}, {{ object.date|time:"H:i" }}</i></p>
-   <p>{{ object.first_name }} {{ object.last_name }}</p>
-   <p>{{ object.email }}</p>
-   <p>Tel: {{ object.phone_number }}</p>
-   <p>{{ object.notes }}</p>
-</div>
+<div class="card">
+   <div class="article-entry">
+      <div class="card-header">
+         <span><i>{{ object.date|date:"d M Y" }}, {{ object.date|time:"H:i" }}</i></span>
+      </div>
+      <ul class="list-group list-group-flush">
+         <li class="list-group-item">{{ object.first_name }} {{ object.last_name }}</li>
+         <li class="list-group-item">{{ object.email }}</li>
+         <li class="list-group-item">Tel: {{ object.phone_number }}</li>
+         <li class="list-group-item">{{ object.notes }}</li>
+      </ul>
+   </div>
 
-<p><a href="{% url 'queue_edit' object.pk %}">Edit</a> |
-   <a href="{% url 'queue_remove' object.pk %}">Remove from Queue</a></p>
-<p>Back to <a href="{% url 'queue_list' %}">Queue</a>.</p>
+   <div class="card-footer text-center text-muted">
+      <a href="{% url 'queue_edit' object.pk %}">Edit</a> |
+      <a href="{% url 'queue_remove' object.pk %}">Remove from Queue</a>
+   </div>
+</div>
+<br>
+<div class="d-flex justify-content-center"><a href="{% url 'queue_list' %}">Go back to queue</a>.</div>
 {% endblock content %}
