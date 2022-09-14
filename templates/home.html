@@ -4,9 +4,8 @@
 
 {% block content %}
    {% if user.is_authenticated %}
-      Welcome {{ user.username }}
-      <br>
-      <p><a href="{% url 'queue_list' %}">Go to queue</a></p>
+      <div class="d-flex justify-content-center">Welcome {{ user.username }}</div>
+      <div class="d-flex justify-content-center"><a href="{% url 'queue_list' %}">Go to queue</a></div>
    {% else %}
       <p>Login or signup to access your queue...</p>
    {% endif %}
