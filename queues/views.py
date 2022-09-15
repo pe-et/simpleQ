@@ -13,7 +13,7 @@ class QueueListView(LoginRequiredMixin, ListView):
         queryset = super().get_queryset()
         return queryset.filter(user=self.request.user).order_by("date")
 
-    paginate_by = 2
+    paginate_by = 10
     template_name = "queue_list.html"
 
 

@@ -7,6 +7,6 @@
       <div class="d-flex justify-content-center">Welcome {{ user.username }}</div>
       <div class="d-flex justify-content-center"><a href="{% url 'queue_list' %}">Go to queue</a></div>
    {% else %}
-      <div class="d-flex justify-content-center">Login or signup to access your queue...</div>
+      <div class="d-flex justify-content-center">Log in or sign up to access your queue...</div>
    {% endif %}
 {% endblock content %}
