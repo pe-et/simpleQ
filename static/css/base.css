@@ -7,3 +7,6 @@ a {
 .brand-text, .menu-text {
    color: white;
 }
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+   background-color: #f4623a !important;
+}
