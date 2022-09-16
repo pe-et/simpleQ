@@ -40,7 +40,7 @@ In .env: Add sqlite to DATABASE_URL.
 ```
    DATABASE_URL=sqlite:///db.sqlite3
 ```
-Option 1, using email service provider:
+Option 1, using email service provider:<br>
 Using a service for transactional emails such as Sendinblue, SendGrid etc. Obtain your email credentials and add them to the remaining fields in .env.
 ```
    EMAIL_HOST=
@@ -49,7 +49,7 @@ Using a service for transactional emails such as Sendinblue, SendGrid etc. Obtai
    DEFAULT_FROM_EMAIL=
    EMAIL_PORT=
 ```
-Option 2, output emails to console:
+Option 2, output emails to console:<br>
 Remove email credential refs in django_project/settings.py line 145-150, and change EMAIL_BACKEND (line 143) to output emails to console like so:
 ```
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
