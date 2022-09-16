@@ -15,7 +15,7 @@ Database fields are encrypted using django-cryptography.<br> User authentication
 
 Application is hosted and free to use at: https://queueme2.herokuapp.com/
 
-Watch a short demo of the application [here](https://youtu.be/N4w2Gx1831k).
+Watch a short demo of the application [here](https://youtu.be/LrhMhWaD0KU).
 
 ### How to Install and Run the Application
 
