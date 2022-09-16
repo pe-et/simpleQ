@@ -38,15 +38,21 @@ Rename .env.example to .env, generate a new secret key and copy/paste to env und
 ```
 In .env: Add sqlite to DATABASE_URL.
 ```
-   DATABAE_URL=sqlite:///db.sqlite3
+   DATABASE_URL=sqlite:///db.sqlite3
 ```
-Using a service for transactional emails such as Sendinblue, SendGrid etc. Get email credentials and add them to the remaining fields in .env.
+Option 1, using email service provider:
+Using a service for transactional emails such as Sendinblue, SendGrid etc. Obtain your email credentials and add them to the remaining fields in .env.
 ```
    EMAIL_HOST=
    EMAIL_HOST_USER=
    EMAIL_HOST_PASSWORD=
    DEFAULT_FROM_EMAIL=
    EMAIL_PORT=
+```
+Option 2, output emails to console:
+Remove email credential refs in django_project/settings.py line 145-150, and change EMAIL_BACKEND (line 143) to output emails to console like so:
+```
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ```
 Make migrations
 ```
